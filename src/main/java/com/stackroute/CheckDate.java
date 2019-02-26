@@ -14,18 +14,18 @@ public class CheckDate {
      */
     public boolean startDate() {
         boolean result=false;
-        String s1;
+        String string;
 
-        Calendar c = Calendar.getInstance();
+        Calendar calendar = Calendar.getInstance();
 
 // Set the calendar to monday of the current week
-        c.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+        calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
 
 // Print dates of the current week starting on Monday
-        DateFormat df = new SimpleDateFormat("EEE dd/MM/yyyy");
-        s1 = df.format(c.getTime());
+        DateFormat dateFormat = new SimpleDateFormat("EEE dd/MM/yyyy");
+        string = dateFormat.format(calendar.getTime());
 
-        if (s1.equals("Mon 18/02/2019")) {
+        if (string.equals("Mon 18/02/2019")) {
             result=true;
         } else {
             result=false;
@@ -39,19 +39,19 @@ public class CheckDate {
      */
     public boolean endDate() {
         boolean result;
-        String s2="";
+        String string;
 
-        Calendar c = Calendar.getInstance();
+        Calendar calender = Calendar.getInstance();
 
 // Set the calendar to monday of the current week
-        c.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+        calender.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
 
 // Print dates of the current week starting on Monday
-        DateFormat df = new SimpleDateFormat("EEE dd/MM/yyyy");
-        c.add(Calendar.DATE,6);
-        s2 = (df.format(c.getTime()));
+        DateFormat dateFormat = new SimpleDateFormat("EEE dd/MM/yyyy");
+        calender.add(Calendar.DATE,6);
+        string = (dateFormat.format(calender.getTime()));
 
-        if(s2.equals("Sun 24/02/2019")) {
+        if(string.equals("Sun 24/02/2019")) {
             result=true;
         }
         else {
